@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --color-gold-400: #FCD34D;
+    --color-gold-500: #D4AF37;
+    --color-gold-600: #B4941F;
+    --color-gold-700: #856D12;
+
+    --color-dark-900: #050505;
+    --color-dark-800: #0a0a0a;
+    --color-dark-700: #121212;
+
+    --font-en: "Outfit", sans-serif;
+    --font-ar: "Cairo", sans-serif;
+
+    --animate-shine: shine 3s linear infinite;
+    --animate-float: float 6s infinite ease-in-out;
+
+    @keyframes shine {
+        to {
+            background-position: 200% center;
+        }
+    }
+
+    @keyframes float {
+
+        0%,
+        100% {
+            transform: translateY(0);
+            opacity: 0.2;
+        }
+
+        50% {
+            transform: translateY(-20px);
+            opacity: 0.8;
+        }
+    }
+
+    --shadow-gold: 0 0 20px rgba(212, 175, 55, 0.1);
+}
+
+:root {
+    --gold: #D4AF37;
+}
+
+body {
+    @apply bg-white dark:bg-dark-900 text-dark-900 dark:text-white font-en transition-colors duration-300;
+}
+
+.text-gold-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 animate-shine bg-[length:200%_auto];
+}
+
+.glass-card {
+    @apply bg-white/40 dark:bg-white/5 backdrop-blur-md border border-black/5 dark:border-gold-500/10 shadow-sm dark:shadow-none transition-all duration-300 hover:shadow-md;
+}
+
+.glass-card:hover {
+    @apply dark:shadow-[--shadow-gold];
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-dark-900;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-gray-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-gold-500;
+}
