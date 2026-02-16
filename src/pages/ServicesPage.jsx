@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { Building, Settings, Chrome, ArrowRight, Shield, Globe, Cpu } from 'lucide-react';
+import { Building, Settings, Chrome, ArrowRight, Shield, MessageCircle } from 'lucide-react';
 
 const ServicesPage = () => {
     const { t } = useLanguage();
@@ -8,6 +8,8 @@ const ServicesPage = () => {
     const businessLines = [
         {
             title: 'STEPS CRM',
+            titleEn: 'STEPS CRM',
+            titleAr: 'STEPS CRM',
             subtitle: t('Vertical Real Estate CRM', 'نظام إدارة عقاري'),
             icon: <Building className="text-gold-500" />,
             desc: t(
@@ -24,6 +26,8 @@ const ServicesPage = () => {
         },
         {
             title: t('Odoo ERP Implementation', 'تنفيذ أنظمة Odoo'),
+            titleEn: 'Odoo ERP Implementation',
+            titleAr: 'تنفيذ أنظمة Odoo',
             subtitle: t('Finance & Audit', 'تدقيق مالي وتنفيذ'),
             icon: <Settings className="text-gold-500" />,
             desc: t(
@@ -39,6 +43,8 @@ const ServicesPage = () => {
         },
         {
             title: t('Google Infrastructure', 'خدمات Google للأعمال'),
+            titleEn: 'Google Infrastructure',
+            titleAr: 'خدمات Google للأعمال',
             subtitle: t('Consoles & Digital Presence', 'البنية الرقمية والوجود'),
             icon: <Chrome className="text-gold-500" />,
             desc: t(
@@ -83,13 +89,26 @@ const ServicesPage = () => {
                                     <p className="text-gray-500 dark:text-gray-400 text-lg leading-relaxed mb-8">
                                         {item.desc}
                                     </p>
-                                    <div className="grid sm:grid-cols-2 gap-4">
-                                        {item.features.map((f, idx) => (
-                                            <div key={idx} className="flex items-center gap-3 text-dark-800 dark:text-gray-300">
-                                                <Shield size={16} className="text-gold-500" />
-                                                <span>{f}</span>
-                                            </div>
-                                        ))}
+                                    <div className="flex flex-wrap gap-4 items-center">
+                                        <div className="grid sm:grid-cols-2 gap-4 grow">
+                                            {item.features.map((f, idx) => (
+                                                <div key={idx} className="flex items-center gap-3 text-dark-800 dark:text-gray-300">
+                                                    <Shield size={16} className="text-gold-500" />
+                                                    <span>{f}</span>
+                                                </div>
+                                            ))}
+                                        </div>
+                                        <div className="w-full sm:w-auto mt-6 pt-6 border-t border-black/5 dark:border-white/10 sm:mt-0 sm:pt-0 sm:border-0">
+                                            <a
+                                                href={`https://wa.me/201050007513?text=${encodeURIComponent(`Hello, I am interested in ${item.titleEn} / مرحباً، أنا مهتم بـ ${item.titleAr}`)}`}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-green-500 hover:bg-green-600 text-white rounded-xl font-bold transition-all duration-300 w-full sm:w-auto shadow-lg shadow-green-500/20 active:scale-95"
+                                            >
+                                                <MessageCircle size={20} />
+                                                {t('Order Service', 'اطلب الخدمة')}
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
