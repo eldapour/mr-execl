@@ -28,10 +28,12 @@ const Navbar = () => {
     return (
         <nav className={`fixed w-full py-6 z-50 transition-all duration-300 ${scrolled ? 'bg-white/80 dark:bg-dark-900/90 backdrop-blur-md py-3 shadow-sm' : 'bg-transparent py-5'}`}>
             <div className="container mx-auto px-6 flex justify-between items-center">
-                <Link to="/" className="text-2xl font-bold tracking-wider flex items-center gap-2" dir="ltr">
-                    <span className="text-dark-900 dark:text-white">MR</span>
-                    <span className="text-gold-500">EXCEL</span>
-                    <div className="w-2 h-2 bg-gold-500 rounded-full ml-1 animate-pulse"></div>
+                <Link to="/" className="flex items-center gap-2">
+                    <img
+                        src={isDark ? "/assets/mr-execl-logo-dark.png" : "/assets/mr-execl-logo.png"}
+                        alt="MR EXCEL"
+                        className="h-12 w-auto object-contain"
+                    />
                 </Link>
 
                 {/* Desktop Menu */}

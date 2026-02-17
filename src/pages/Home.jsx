@@ -1,11 +1,13 @@
 import React, { useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { motion } from 'framer-motion';
-import { ArrowRight, Building, Settings, Chrome, Shield, Zap, Globe, Users, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Building, Settings, Chrome, Shield, Zap, Globe, Users, CheckCircle2, Download, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useTheme } from '../context/ThemeContext';
 
 const Home = () => {
     const { t } = useLanguage();
+    const { isDark } = useTheme();
 
     useEffect(() => {
         // Background dots logic
@@ -85,9 +87,15 @@ const Home = () => {
                         <Link to="/services" className="px-8 py-4 bg-gradient-to-r from-gold-600 to-gold-400 text-black font-bold rounded hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] transition-all transform hover:-translate-y-1">
                             {t('Explore Solutions', 'اكتشف حلولنا')}
                         </Link>
-                        <Link to="/contact" className="px-8 py-4 border border-black/20 dark:border-white/20 hover:border-gold-500 hover:text-gold-400 text-dark-900 dark:text-white font-semibold rounded transition-all">
-                            {t('Get in Touch', 'تواصل معنا')}
-                        </Link>
+                        <a
+                            href="/assets/company-profile.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="px-8 py-4 border border-black/20 dark:border-white/20 hover:border-gold-500 hover:text-gold-400 text-dark-900 dark:text-white font-semibold rounded transition-all flex items-center justify-center gap-2"
+                        >
+                            <Download size={18} />
+                            {t('Company Profile', 'بروفايل الشركة')}
+                        </a>
                     </div>
                 </div>
 
@@ -201,6 +209,48 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+
+            {/* CRM Showcase */}
+            <section className="py-24 bg-gray-50 dark:bg-dark-900 overflow-hidden">
+                <div className="container mx-auto px-6">
+                    <div className="flex flex-col lg:flex-row items-center gap-12">
+                        <div className="lg:w-1/2">
+                            <h2 className="text-gold-500 text-sm tracking-widest uppercase font-bold mb-2">{t('Our Product', 'منتجنا')}</h2>
+                            <h3 className="text-3xl md:text-5xl font-bold mb-6 dark:text-white">STEPS CRM</h3>
+                            <p className="text-gray-500 dark:text-gray-400 text-lg mb-8 leading-relaxed">
+                                {t(
+                                    'Discover the power of STEPS CRM, specifically designed for real estate developers and brokers. Manage leads, track properties, and close deals more efficiently.',
+                                    'اكتشف قوة STEPS CRM المصمم خصيصاً للمطورين العقاريين والوسطاء. أدر العملاء، تتبع العقارات، وأغلق الصفقات بفعالية أكبر.'
+                                )}
+                            </p>
+                            <div className="flex flex-wrap gap-4">
+                                <a href="/assets/company-profile.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-dark-900 dark:bg-white text-white dark:text-black font-bold rounded-lg hover:scale-105 transition-all">
+                                    {t('Company Profile', 'بروفايل الشركة')}
+                                    <ExternalLink size={16} />
+                                </a>
+                            </div>
+                        </div>
+                        <div className="lg:w-1/2 relative">
+                            <motion.div
+                                initial={{ opacity: 0, x: 20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                className="relative rounded-2xl overflow-hidden shadow-2xl"
+                            >
+                                <img
+                                    src={isDark ? "/assets/step-crm-light.png" : "/assets/step-crm-dark.png"}
+                                    alt="STEPS CRM Interface"
+                                    className="w-full h-auto"
+                                />
+                            </motion.div>
+                            {/* Decorative background element */}
+                            <div className="absolute -top-10 -right-10 w-40 h-40 bg-gold-500/10 rounded-full blur-3xl -z-10"></div>
+                            <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-gold-500/10 rounded-full blur-3xl -z-10"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
 
             {/* The Process */}
             <section className="py-24 bg-gray-50 dark:bg-dark-900 border-y border-black/5 dark:border-white/5">
