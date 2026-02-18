@@ -35,8 +35,29 @@ const Footer = () => {
                     <div>
                         <h4 className="font-bold mb-6">{t('Contact', 'تواصل')}</h4>
                         <ul className="space-y-3 text-gray-500 dark:text-gray-400 text-sm">
-                            <li className="flex items-center gap-3"><Mail size={16} className="text-gold-500" /> info@mrxcel-app.com</li>
-                            <li className="flex items-center gap-3"><Globe size={16} className="text-gold-500" /> www.mrxcel-app.com</li>
+                            <li className="flex items-center gap-3">
+                                <Mail size={16} className="text-gold-500" />
+                                <a href="mailto:info@mrexcel-app.com" className="hover:text-gold-500 transition-colors">info@mrexcel-app.com</a>
+                            </li>
+                            <li className="flex items-center gap-3">
+                                <Globe size={16} className="text-gold-500" />
+                                <div className="flex flex-col gap-1">
+                                    <a href="https://www.mrexcel-app.com" target="_blank" rel="noopener noreferrer" className="hover:text-gold-500 transition-colors">mrexcel-app.com</a>
+                                    <a href="https://www.stepscrm.com" target="_blank" rel="noopener noreferrer" className="hover:text-gold-500 transition-colors">stepscrm.com</a>
+                                    <a href="https://www.stepscrm.pro" target="_blank" rel="noopener noreferrer" className="hover:text-gold-500 transition-colors">stepscrm.pro</a>
+                                </div>
+                            </li>
+                            <li className="flex items-center gap-3 mt-4">
+                                <a
+                                    href="https://maps.app.goo.gl/arMLWWvRbakq4pBH6"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-2 px-4 py-2 bg-gold-500/10 border border-gold-500/20 rounded-lg text-gold-500 hover:bg-gold-500/20 transition-all font-semibold"
+                                >
+                                    <Globe size={14} />
+                                    {t('Location on Map', 'موقعنا على الخريطة')}
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>

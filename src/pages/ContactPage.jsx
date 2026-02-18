@@ -27,7 +27,7 @@ const ContactPage = () => {
                                 </div>
                                 <div>
                                     <h4 className="font-bold text-lg dark:text-white">{t('Email Us', 'راسلنا')}</h4>
-                                    <p className="text-gray-500 dark:text-gray-400">info@mrxcel-app.com</p>
+                                    <a href="mailto:info@mrexcel-app.com" className="text-gray-500 dark:text-gray-400 hover:text-gold-500 transition-colors">info@mrexcel-app.com</a>
                                 </div>
                             </div>
 
@@ -35,9 +35,23 @@ const ContactPage = () => {
                                 <div className="w-14 h-14 rounded-2xl bg-gold-500/10 flex items-center justify-center text-gold-500 shrink-0 group-hover:bg-gold-500 group-hover:text-black transition-all">
                                     <Globe size={24} />
                                 </div>
+                                <div className="flex flex-col gap-1">
+                                    <h4 className="font-bold text-lg dark:text-white">{t('Visit Our Websites', 'مواقعنا')}</h4>
+                                    <a href="https://www.mrexcel-app.com" target="_blank" rel="noopener noreferrer" className="text-gray-500 dark:text-gray-400 hover:text-gold-500 transition-colors">www.mrexcel-app.com</a>
+                                    <a href="https://www.stepscrm.com" target="_blank" rel="noopener noreferrer" className="text-gray-500 dark:text-gray-400 hover:text-gold-500 transition-colors">www.stepscrm.com</a>
+                                    <a href="https://www.stepscrm.pro" target="_blank" rel="noopener noreferrer" className="text-gray-500 dark:text-gray-400 hover:text-gold-500 transition-colors">www.stepscrm.pro</a>
+                                </div>
+                            </div>
+
+                            <div className="flex gap-6 group">
+                                <div className="w-14 h-14 rounded-2xl bg-gold-500/10 flex items-center justify-center text-gold-500 shrink-0 group-hover:bg-gold-500 group-hover:text-black transition-all">
+                                    <MapPin size={24} />
+                                </div>
                                 <div>
-                                    <h4 className="font-bold text-lg dark:text-white">{t('Visit Website', 'موقعنا')}</h4>
-                                    <p className="text-gray-500 dark:text-gray-400">www.mrxcel-app.com</p>
+                                    <h4 className="font-bold text-lg dark:text-white">{t('Our Location', 'موقعنا')}</h4>
+                                    <a href="https://maps.app.goo.gl/arMLWWvRbakq4pBH6" target="_blank" rel="noopener noreferrer" className="text-gray-500 dark:text-gray-400 hover:text-gold-500 transition-colors">
+                                        {t('View on Google Maps', 'عرض على خرائط جوجل')}
+                                    </a>
                                 </div>
                             </div>
 
@@ -47,7 +61,14 @@ const ContactPage = () => {
                                 </div>
                                 <div>
                                     <h4 className="font-bold text-lg dark:text-white">{t('Global Live Support', 'دعم فني مباشر')}</h4>
-                                    <p className="text-gray-500 dark:text-gray-400">24/7 Remote Assistance</p>
+                                    <a
+                                        href="https://wa.me/201050007513"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-gray-500 dark:text-gray-400 hover:text-gold-500 transition-colors"
+                                    >
+                                        {t('WhatsApp Support', 'دعم واتساب مباشر')}
+                                    </a>
                                 </div>
                             </div>
                         </div>

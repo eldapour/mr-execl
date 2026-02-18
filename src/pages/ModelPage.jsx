@@ -70,19 +70,19 @@ const ModelPage = () => {
                 <div className="grid md:grid-cols-4 gap-8 py-16 border-y border-black/5 dark:border-white/10">
                     <div className="text-center">
                         <div className="text-4xl font-bold text-gold-500 mb-2">99%</div>
-                        <div className="text-gray-500 dark:text-gray-400 text-sm uppercase tracking-widest">{t('Uptime Guarantee', 'ضمان الاستمرارية')}</div>
+                        <div className="text-gray-500 dark:text-gray-400 text-sm uppercase tracking-widest">{t('Support Solved', 'حل التذاكر في أقل من 24 ساعة')}</div>
                     </div>
                     <div className="text-center">
-                        <div className="text-4xl font-bold text-gold-500 mb-2">50+</div>
-                        <div className="text-gray-500 dark:text-gray-400 text-sm uppercase tracking-widest">{t('Projects Delivered', 'مشروع تم تسليمه')}</div>
+                        <div className="text-4xl font-bold text-gold-500 mb-2">90+</div>
+                        <div className="text-gray-500 dark:text-gray-400 text-sm uppercase tracking-widest">{t('Projects Delivered', 'مشروع تم تسليمه (3 سنوات)')}</div>
                     </div>
                     <div className="text-center">
-                        <div className="text-4xl font-bold text-gold-500 mb-2">3+</div>
-                        <div className="text-gray-500 dark:text-gray-400 text-sm uppercase tracking-widest">{t('Core Verticals', 'محاور أساسية')}</div>
+                        <div className="text-4xl font-bold text-gold-500 mb-2">15+</div>
+                        <div className="text-gray-500 dark:text-gray-400 text-sm uppercase tracking-widest">{t('Years Experience', 'خبرة مجمعة')}</div>
                     </div>
                     <div className="text-center">
                         <div className="text-4xl font-bold text-gold-500 mb-2">24/7</div>
-                        <div className="text-gray-500 dark:text-gray-400 text-sm uppercase tracking-widest">{t('Remote Support', 'دعم فني عن بعد')}</div>
+                        <div className="text-gray-500 dark:text-gray-400 text-sm uppercase tracking-widest">{t('MCS Remote Support', 'دعم فني MCS عن بُعد')}</div>
                     </div>
                 </div>
             </div>

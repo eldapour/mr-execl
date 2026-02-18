@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { Building, Settings, Chrome, ArrowRight, Shield, MessageCircle } from 'lucide-react';
+import { Building, Settings, Chrome, ArrowRight, Shield, MessageCircle, ExternalLink } from 'lucide-react';
 
 const ServicesPage = () => {
     const { t } = useLanguage();
@@ -13,49 +13,55 @@ const ServicesPage = () => {
             subtitle: t('Vertical Real Estate CRM', 'نظام إدارة عقاري'),
             icon: <Building className="text-gold-500" />,
             desc: t(
-                'A comprehensive cloud-based ecosystem designed specifically for real estate developers and brokerages. It streamlines the lead lifecycle, automates sales processes, and integrates marketing and financial operations into one unified dashboard.',
-                'نظام سحابي متكامل مخصص للمطورين العقاريين وشركات الوساطة. يعمل على تسهيل إدارة دورة حياة العملاء، أتمتة عمليات المبيعات، وربط العمليات التسويقية والمالية في لوحة تحكم موحدة.'
+                'STEPS CRM is a cloud-based web application purpose-built for real estate developers and brokerage companies to automate and streamline operations, increase conversion rates, and enhance productivity.',
+                'STEPS CRM هو نظام سحابي متكامل تم تطويره بواسطة خبراء في التسويق العقاري، ومصمم خصيصاً لشركات التطوير العقاري والوساطة لأتمتة وتنظيم العمليات البيعية.'
             ),
             features: [
-                t('Lead Lifecycle Management', 'إدارة دورة حياة العملاء'),
-                t('Sales Automation', 'أتمتة المبيعات'),
-                t('Integrated Marketing', 'تسويق متكامل'),
-                t('Inventory Management', 'إدارة الوحدات والعقارات')
+                t('Lead & Client Management', 'إدارة العملاء المحتملين'),
+                t('Sales Pipeline Tracking', 'متابعة مراحل البيع'),
+                t('Marketing Campaign Performance', 'قياس أداء الحملات التسويقية'),
+                t('Commission & Financial Follow-up', 'متابعة العمولات والجوانب المالية'),
+                t('Team Performance Monitoring', 'تقييم أداء فرق المبيعات'),
+                t('Real-time Reporting & Analytics', 'تقارير لحظية تدعم اتخاذ القرار')
             ],
-            link: 'https://www.stepscrm.com'
+            link: 'https://www.stepscrm.com',
+            demoLink: 'https://youtube.com/playlist?list=PLLbjPPN9Ueb548HxoPjCdv1qdMnqewH_H&si=vvnqjzKAWuaGd_VY'
         },
         {
-            title: t('Odoo ERP Implementation', 'تنفيذ أنظمة Odoo'),
+            title: t('Odoo ERP Implementation', 'تنفيذ أنظمة Odoo ERP'),
             titleEn: 'Odoo ERP Implementation',
-            titleAr: 'تنفيذ أنظمة Odoo',
-            subtitle: t('Finance & Audit', 'تدقيق مالي وتنفيذ'),
+            titleAr: 'تنفيذ أنظمة Odoo ERP',
+            subtitle: t('Business Transformation', 'التحول الرقمي للأعمال'),
             icon: <Settings className="text-gold-500" />,
             desc: t(
-                'Expert analysis and implementation of Odoo ERP systems for Small and Medium Enterprises (SMBs). We specialize in Retail, Distribution, and Services sectors, ensuring a smooth transition to a fully digital enterprise resource planning environment.',
-                'تحليل وتنفيذ احترافي لأنظمة Odoo ERP للشركات الصغيرة والمتوسطة. متخصصون في قطاعات التجزئة، التوزيع، والخدمات، لضمان انتقال سلس إلى إدارة موارد مؤسسية رقمية بالكامل.'
+                'End-to-end Odoo ERP implementation delivery for SMEs. With 90+ successful projects, we provide structured methodology from analysis to deployment and ongoing support.',
+                'نقدم خدمات متكاملة لتنفيذ وتخصيص نظام Odoo ERP للشركات الصغيرة والمتوسطة، وفق منهجية احترافية تضمن نجاح التحول الرقمي.'
             ),
             features: [
-                t('Process Analysis', 'تحليل العمليات'),
-                t('Data Migration', 'نقل البيانات'),
-                t('Custom Workflows', 'تخصيص سير العمل'),
-                t('Staff Training', 'تدريب الفريق')
+                t('Process Analysis & Architecture', 'تحليل العمليات وبناء الحلول'),
+                t('Configuration & Customization', 'إعداد وتخصيص النظام'),
+                t('Custom Module Development', 'تطوير وحدات مخصصة'),
+                t('Third-party Integration', 'ربط النظام مع أنظمة خارجية'),
+                t('Testing & Production Deployment', 'الاختبار والإطلاق الفعلي'),
+                t('Training & Knowledge Transfer', 'تدريب المستخدمين ونقل الخبرة')
             ]
         },
         {
-            title: t('Google Infrastructure', 'خدمات Google للأعمال'),
-            titleEn: 'Google Infrastructure',
-            titleAr: 'خدمات Google للأعمال',
-            subtitle: t('Consoles & Digital Presence', 'البنية الرقمية والوجود'),
+            title: t('Google Business Infrastructure', 'البنية الرقمية لخدمات Google'),
+            titleEn: 'Google Business Infrastructure',
+            titleAr: 'البنية الرقمية لخدمات Google',
+            subtitle: t('Compliance & Monetization', 'الالتزام وتحقيق الدخل'),
             icon: <Chrome className="text-gold-500" />,
             desc: t(
-                'Setting up professional digital foundations using Googles powerful business suite. From Google Business Profiles to Developer Consoles and AdMob monetization, we ensure your business is optimized for the global digital market.',
-                'إعداد أسس رقمية احترافية باستخدام مجموعة خدمات Google للأعمال. من ملفات Google Business إلى منصات المطورين وأنظمة AdMob، نضمن تحسين عملك للسوق الرقمي العالمي.'
+                'Professional setup and compliance management for Google business platforms. We ensure your digital presence is structured according to best practices for growth and stable monetization.',
+                'نوفر إعداداً احترافياً لحسابات وأنظمة Google التجارية، مع ضمان الالتزام بسياسات Google وأفضل الممارسات التقنية لضمان الاستقرار والنمو.'
             ),
             features: [
-                t('Developer Console Setup', 'إعداد منصات المطورين'),
-                t('AdMob Monetization', 'نظام تحقيق الدخل AdMob'),
-                t('Business Profile Optimization', 'تحسين ملفات الأعمال'),
-                t('Analytics Integration', 'ربط منصات التحليل')
+                t('Business Profile Optimization', 'إعداد وتحسين Business Profile'),
+                t('Developer Console Configuration', 'إعداد Developer Console'),
+                t('AdMob Setup & Monetization', 'إعداد AdMob وتجهيزه للدخل'),
+                t('Policy Compliance Review', 'مراجعة التوافق مع السياسات'),
+                t('Technical Issue Resolution', 'حل المشكلات التقنية للحسابات')
             ]
         }
     ];
@@ -79,11 +85,18 @@ const ServicesPage = () => {
                                     </div>
                                     <h3 className="text-3xl font-bold mb-2 dark:text-white">{item.title}</h3>
                                     <p className="text-gold-500 font-semibold uppercase tracking-wider text-xs mb-4">{item.subtitle}</p>
-                                    {item.link && (
-                                        <a href={item.link} target="_blank" className="inline-flex items-center text-gold-500 hover:text-gold-400 font-bold gap-2">
-                                            {t('Visit Platform', 'زيارة المنصة')} <ArrowRight size={18} />
-                                        </a>
-                                    )}
+                                    <div className="flex flex-wrap gap-4 mb-4">
+                                        {item.link && (
+                                            <a href={item.link} target="_blank" className="inline-flex items-center text-gold-500 hover:text-gold-400 font-bold gap-2">
+                                                {t('Visit Platform', 'زيارة المنصة')} <ArrowRight size={18} />
+                                            </a>
+                                        )}
+                                        {item.demoLink && (
+                                            <a href={item.demoLink} target="_blank" className="inline-flex items-center text-red-500 hover:text-red-400 font-bold gap-2">
+                                                {t('Watch Demo', 'مشاهدة عرض توضيحي')} <ExternalLink size={18} />
+                                            </a>
+                                        )}
+                                    </div>
                                 </div>
                                 <div className="lg:w-2/3 border-l border-black/5 dark:border-white/10 lg:pl-12">
                                     <p className="text-gray-500 dark:text-gray-400 text-lg leading-relaxed mb-8">

@@ -32,21 +32,21 @@ const Home = () => {
         {
             title: 'STEPS CRM',
             subtitle: t('Vertical Real Estate CRM', 'نظام إدارة عقاري'),
-            desc: t('Cloud-based system for real estate developers and brokerages.', 'نظام سحابي مخصص للمطورين العقاريين وشركات الوساطة.'),
+            desc: t('Cloud-based system for real estate developers and brokerages. Purpose-built for automation and pipeline tracking.', 'نظام سحابي مخصص للمطورين العقاريين وشركات الوساطة. مصمم لأتمتة العمليات ومتابعة مراحل البيع.'),
             icon: <Building />,
             link: 'https://www.stepscrm.com'
         },
         {
             title: t('Odoo ERP Implementation', 'تنفيذ أنظمة Odoo'),
             subtitle: t('Finance & Audit', 'تدقيق مالي وتنفيذ'),
-            desc: t('End-to-end analysis for SMBs.', 'تحليل وتنفيذ وتخصيص نظام Odoo للشركات الصغيرة والمتوسطة.'),
+            desc: t('End-to-end ERP implementation for SMBs with over 90 successful projects.', 'تحليل وتنفيذ وتخصيص نظام Odoo للشركات الصغيرة والمتوسطة بأكثر من 90 مشروعاً ناجحاً.'),
             icon: <Settings />,
             link: '/services'
         },
         {
             title: t('Google Infrastructure', 'خدمات Google للأعمال'),
-            subtitle: t('Consoles & Consoles', 'البنية الرقمية'),
-            desc: t('Professional setup of Google Consoles.', 'إعداد احترافي للبنية الرقمية: ملفات الأعمال، منصة المطورين.'),
+            subtitle: t('Consoles & Compliance', 'البنية الرقمية والالتزام'),
+            desc: t('Professional setup of Google Business Profiles, Developer Consoles, and AdMob.', 'إعداد احترافي للبنية الرقمية: ملفات الأعمال، منصة المطورين، وأنظمة AdMob.'),
             icon: <Chrome />,
             link: '/services'
         }
@@ -145,10 +145,10 @@ const Home = () => {
                 <div className="container mx-auto px-6">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                         {[
-                            { label: t('Projects Delivered', 'مشروع تم تسليمه'), value: '50+' },
-                            { label: t('Years Experience', 'سنوات الخبرة'), value: '10+' },
-                            { label: t('Client Satisfaction', 'رضا العملاء'), value: '99%' },
-                            { label: t('Remote Support', 'دعم عن بعد'), value: '24/7' }
+                            { label: t('Projects Delivered', 'مشروع تم تسليمه (3 سنوات)'), value: '90+' },
+                            { label: t('Years Experience', 'خبرة مجمعة'), value: '15+' },
+                            { label: t('Support Solved', 'حل التذاكر في أقل من 24 ساعة'), value: '99%' },
+                            { label: t('MCS Remote Support', 'دعم فني MCS عن بُعد'), value: '24/7' }
                         ].map((stat, i) => (
                             <div key={i} className="text-center">
                                 <div className="text-3xl md:text-5xl font-bold text-gold-500 mb-2">{stat.value}</div>
@@ -164,19 +164,19 @@ const Home = () => {
                 <div className="container mx-auto px-6">
                     <div className="flex flex-col lg:flex-row gap-16 items-center">
                         <div className="lg:w-1/2">
-                            <h2 className="text-gold-500 text-sm tracking-widest uppercase font-bold mb-2">{t('Industry Focus', 'تخصصنا')}</h2>
-                            <h3 className="text-3xl md:text-5xl font-bold mb-8 dark:text-white">{t('Specialized Verticals', 'حلول لقطاعات محددة')}</h3>
+                            <h2 className="text-gold-500 text-sm tracking-widest uppercase font-bold mb-2">{t('Specialized Verticals', 'القطاعات المتخصصة')}</h2>
+                            <h3 className="text-3xl md:text-5xl font-bold mb-8 dark:text-white">{t('Deep Industry Specialization', 'تركيزنا الصناعي')}</h3>
                             <p className="text-gray-500 dark:text-gray-400 text-lg mb-8 leading-relaxed">
                                 {t(
-                                    'We don\'t just build software; we architect ecosystems. Our deep understanding of specific industries allows us to deliver high-impact results.',
-                                    'نحن لا نبني برمجيات فحسب، بل نصمم أنظمة تشغيل كاملة. فهمنا العميق لمتطلبات القطاعات المختلفة يسمح لنا بتحقيق نتائج ملموسة.'
+                                    'We don\'t just deliver software — we design structured business ecosystems. Our strength lies in deep industry specialization.',
+                                    'نحن لا نقدم برامج فقط — بل نقوم ببناء منظومات تشغيل متكاملة. تعتمد قوتنا على التخصص العميق في محاور استراتيجية.'
                                 )}
                             </p>
                             <div className="space-y-4">
                                 {[
-                                    { title: t('Real Estate Developers', 'المطورين العقاريين'), icon: <Building size={20} /> },
-                                    { title: t('SMB Retail & Distribution', 'التجزئة والتوزيع'), icon: <Zap size={20} /> },
-                                    { title: t('Global Digital Presence', 'التواجد الرقمي العالمي'), icon: <Globe size={20} /> }
+                                    { title: t('Real Estate Technology', 'تكنولوجيا القطاع العقاري'), icon: <Building size={20} /> },
+                                    { title: t('SMB ERP Systems', 'أنظمة ERP للشركات الصغيرة والمتوسطة'), icon: <Zap size={20} /> },
+                                    { title: t('Google Business Ecosystem', 'البنية الرقمية العالمية'), icon: <Globe size={20} /> }
                                 ].map((item, i) => (
                                     <div key={i} className="flex items-center gap-4 p-4 bg-gray-50 dark:bg-dark-900/50 rounded-xl border border-black/5 dark:border-white/5 group hover:border-gold-500/30 transition-all">
                                         <div className="text-gold-500 group-hover:scale-110 transition-transform">{item.icon}</div>
@@ -189,15 +189,21 @@ const Home = () => {
                             <div className="absolute -inset-4 bg-gold-500/20 rounded-full blur-3xl opacity-30"></div>
                             <div className="relative glass-card p-8 md:p-12 rounded-3xl border border-black/5 dark:border-white/5">
                                 <Shield className="text-gold-500 mb-6" size={48} />
-                                <h4 className="text-2xl font-bold mb-4 dark:text-white">{t('The Security Factor', 'عامل الأمان')}</h4>
+                                <h4 className="text-2xl font-bold mb-4 dark:text-white">{t('The Security & Stability Factor', 'عامل الأمان والاستدامة')}</h4>
                                 <p className="text-gray-500 dark:text-gray-400 mb-6">
                                     {t(
-                                        'Data integrity and operational security are at the core of our implementations. We ensure your business is resilient.',
-                                        'سلامة البيانات والأمن التشغيلي هما جوهر تنفيذنا. نحن نضمن أن عملك مرن ومحمي.'
+                                        'Operational security and system integrity are foundational to every solution we implement. We build for performance.',
+                                        'الأمان التشغيلي وسلامة البيانات جزء أساسي من كل مشروع ننفذه. نحن نبني أنظمة مصممة للأداء بأمان واستدامة.'
                                     )}
                                 </p>
                                 <ul className="space-y-3">
-                                    {[t('End-to-end Encryption', 'تشفير كامل'), t('Automated Backups', 'نسخ احتياطي'), t('Cloud Reliability', 'موثوقية سحابية')].map((f, i) => (
+                                    {[
+                                        t('End-to-end Data Protection', 'حماية بيانات متكاملة'),
+                                        t('Automated Backup Strategies', 'نسخ احتياطية مؤتمتة'),
+                                        t('Cloud Infrastructure Reliability', 'موثوقية بنية سحابية'),
+                                        t('Policy-compliant Configurations', 'إعدادات متوافقة مع السياسات'),
+                                        t('Long-term System Scalability', 'قابلية توسع طويلة الأمد')
+                                    ].map((f, i) => (
                                         <li key={i} className="flex items-center gap-2 text-sm text-dark-800 dark:text-gray-300">
                                             <CheckCircle2 size={16} className="text-gold-500" />
                                             {f}
@@ -215,18 +221,27 @@ const Home = () => {
                 <div className="container mx-auto px-6">
                     <div className="flex flex-col lg:flex-row items-center gap-12">
                         <div className="lg:w-1/2">
-                            <h2 className="text-gold-500 text-sm tracking-widest uppercase font-bold mb-2">{t('Our Product', 'منتجنا')}</h2>
+                            <h2 className="text-gold-500 text-sm tracking-widest uppercase font-bold mb-2">{t('Vertical CRM', 'نظام CRM متخصص')}</h2>
                             <h3 className="text-3xl md:text-5xl font-bold mb-6 dark:text-white">STEPS CRM</h3>
                             <p className="text-gray-500 dark:text-gray-400 text-lg mb-8 leading-relaxed">
                                 {t(
-                                    'Discover the power of STEPS CRM, specifically designed for real estate developers and brokers. Manage leads, track properties, and close deals more efficiently.',
-                                    'اكتشف قوة STEPS CRM المصمم خصيصاً للمطورين العقاريين والوسطاء. أدر العملاء، تتبع العقارات، وأغلق الصفقات بفعالية أكبر.'
+                                    'A cloud-based web application purpose-built for real estate developers and brokerage companies to centralize operations and increase conversion.',
+                                    'نظام سحابي متكامل تم تطويره بواسطة خبراء في التسويق العقاري، مصمم خصيصاً لشركات التطوير والوساطة لزيادة معدلات التحويل.'
                                 )}
                             </p>
                             <div className="flex flex-wrap gap-4">
+                                <a
+                                    href="https://youtube.com/playlist?list=PLLbjPPN9Ueb548HxoPjCdv1qdMnqewH_H&si=vvnqjzKAWuaGd_VY"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 px-6 py-3 bg-red-600 text-white font-bold rounded-lg hover:scale-105 transition-all"
+                                >
+                                    {t('Watch Demo', 'مشاهدة عرض توضيحي')}
+                                    <ExternalLink size={16} />
+                                </a>
                                 <a href="/assets/company-profile.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-dark-900 dark:bg-white text-white dark:text-black font-bold rounded-lg hover:scale-105 transition-all">
                                     {t('Company Profile', 'بروفايل الشركة')}
-                                    <ExternalLink size={16} />
+                                    <Download size={16} />
                                 </a>
                             </div>
                         </div>
