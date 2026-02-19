@@ -26,13 +26,13 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className={`fixed w-full py-6 z-50 transition-all duration-300 ${scrolled ? 'bg-white/80 dark:bg-dark-900/90 backdrop-blur-md py-3 shadow-sm' : 'bg-transparent py-5'}`}>
+        <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/80 dark:bg-dark-900/90 backdrop-blur-md py-4 shadow-md' : 'bg-transparent py-6'}`}>
             <div className="container mx-auto px-6 flex justify-between items-center">
                 <Link to="/" className="flex items-center gap-2">
                     <img
                         src={isDark ? "/assets/mr-execl-logo-dark.png" : "/assets/mr-execl-logo.png"}
                         alt="MR EXCEL"
-                        className="h-12 w-auto object-contain"
+                        className="h-20 w-auto object-contain"
                     />
                 </Link>
 

@@ -12,8 +12,10 @@ const Footer = () => {
                 <div className="grid md:grid-cols-4 gap-12 mb-12">
                     <div className="md:col-span-2 ">
                         <Link to="/" className="text-3xl font-bold tracking-wider flex items-center gap-2 mb-6" dir={t('ltr', 'rtl')}>
-                            <span className="text-dark-900 dark:text-white">MR</span>
-                            <span className="text-gold-500">EXCEL</span>
+                            <div dir={t('ltr')}  >
+                                <span className="text-dark-900 dark:text-white">MR</span>
+                                <span className="text-gold-500">EXCEL</span>
+                            </div>
                         </Link>
                         <p className="text-gray-500 dark:text-gray-400 max-w-sm">
                             {t(

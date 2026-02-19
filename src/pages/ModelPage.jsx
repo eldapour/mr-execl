@@ -67,23 +67,34 @@ const ModelPage = () => {
                 </div>
 
                 {/* Growth Statistics - New Content */}
-                <div className="grid md:grid-cols-4 gap-8 py-16 border-y border-black/5 dark:border-white/10">
-                    <div className="text-center">
-                        <div className="text-4xl font-bold text-gold-500 mb-2">99%</div>
-                        <div className="text-gray-500 dark:text-gray-400 text-sm uppercase tracking-widest">{t('Support Solved', 'حل التذاكر في أقل من 24 ساعة')}</div>
-                    </div>
-                    <div className="text-center">
-                        <div className="text-4xl font-bold text-gold-500 mb-2">90+</div>
-                        <div className="text-gray-500 dark:text-gray-400 text-sm uppercase tracking-widest">{t('Projects Delivered', 'مشروع تم تسليمه (3 سنوات)')}</div>
-                    </div>
-                    <div className="text-center">
-                        <div className="text-4xl font-bold text-gold-500 mb-2">15+</div>
-                        <div className="text-gray-500 dark:text-gray-400 text-sm uppercase tracking-widest">{t('Years Experience', 'خبرة مجمعة')}</div>
-                    </div>
-                    <div className="text-center">
-                        <div className="text-4xl font-bold text-gold-500 mb-2">24/7</div>
-                        <div className="text-gray-500 dark:text-gray-400 text-sm uppercase tracking-widest">{t('MCS Remote Support', 'دعم فني MCS عن بُعد')}</div>
-                    </div>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-16 border-y border-black/5 dark:border-white/10">
+                    {[
+                        {
+                            value: t('90+', '+90'),
+                            label: t('Projects Successfully Delivered', 'مشروع تم تنفيذه بنجاح')
+                        },
+                        {
+                            value: t('3 Core', '3 حلول تقنية'),
+                            label: t('Technology Solutions', 'متخصصة')
+                        },
+                        {
+                            value: t('Cloud-Based', 'أنظمة سحابية'),
+                            label: t('Secure & Scalable Systems', 'آمنة وقابلة للتوسع')
+                        },
+                        {
+                            value: t('Dedicated', 'دعم فني'),
+                            label: t('Remote Support', 'عن بُعد باحترافية')
+                        }
+                    ].map((m, i) => (
+                        <div key={i} className="text-center group">
+                            <div className="text-2xl md:text-3xl font-bold text-gold-500 mb-2 transition-transform group-hover:scale-110">
+                                {m.value}
+                            </div>
+                            <div className="text-gray-500 dark:text-gray-400 text-[10px] md:text-xs uppercase tracking-[0.2em] leading-relaxed">
+                                {m.label}
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>
