@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
-import { Linkedin, Twitter, Mail, Globe } from 'lucide-react';
+import { Linkedin, Twitter, Github, Facebook, Instagram, Mail, Globe } from 'lucide-react';
 
 const Footer = () => {
     const { t } = useLanguage();
@@ -65,11 +65,20 @@ const Footer = () => {
                 </div>
 
                 <div className="border-t border-black/5 dark:border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="text-gray-600 dark:text-gray-500 text-sm">© {new Date().getFullYear()} MR EXCEL. All rights reserved.</p>
+                    <div className="flex flex-col md:flex-row items-center gap-4 text-sm text-gray-600 dark:text-gray-500">
+                        <p>© {new Date().getFullYear()} MR EXCEL. All rights reserved.</p>
+                        <div className="hidden md:block w-1 h-1 rounded-full bg-gray-300 dark:bg-gray-700"></div>
+                        <div className="flex gap-4">
+                            <Link to="/privacy&policy" className="hover:text-gold-500 transition-colors">{t('Privacy & Policy', 'سياسة الخصوصية')}</Link>
+                            <Link to="/terms&conditions" className="hover:text-gold-500 transition-colors">{t('Terms & Conditions', 'الشروط والأحكام')}</Link>
+                        </div>
+                    </div>
                     <div className="flex gap-4">
-                        <a href="#" className="w-10 h-10 rounded-full bg-gray-100 dark:bg-dark-800 flex items-center justify-center text-gray-400 hover:text-gold-500 hover:bg-gold-200 dark:hover:bg-dark-700 transition-all duration-300"><Linkedin size={18} /></a>
-                        <a href="#" className="w-10 h-10 rounded-full bg-gray-100 dark:bg-dark-800 flex items-center justify-center text-gray-400 hover:text-gold-500 hover:bg-gold-200 dark:hover:bg-dark-700 transition-all duration-300"><Twitter size={18} /></a>
-                        <a href="#" className="w-10 h-10 rounded-full bg-gray-100 dark:bg-dark-800 flex items-center justify-center text-gray-400 hover:text-gold-500 hover:bg-gold-200 dark:hover:bg-dark-700 transition-all duration-300"><Mail size={18} /></a>
+                        <a href="/" className="w-10 h-10 rounded-full bg-gray-100 dark:bg-dark-800 flex items-center justify-center text-gray-400 hover:text-gold-500 hover:bg-gold-200 dark:hover:bg-dark-700 transition-all duration-300"><Github size={18} /></a>
+                        <a href="/" className="w-10 h-10 rounded-full bg-gray-100 dark:bg-dark-800 flex items-center justify-center text-gray-400 hover:text-gold-500 hover:bg-gold-200 dark:hover:bg-dark-700 transition-all duration-300"><Linkedin size={18} /></a>
+                        <a href="/" className="w-10 h-10 rounded-full bg-gray-100 dark:bg-dark-800 flex items-center justify-center text-gray-400 hover:text-gold-500 hover:bg-gold-200 dark:hover:bg-dark-700 transition-all duration-300"><Twitter size={18} /></a>
+                        <a href="/" className="w-10 h-10 rounded-full bg-gray-100 dark:bg-dark-800 flex items-center justify-center text-gray-400 hover:text-gold-500 hover:bg-gold-200 dark:hover:bg-dark-700 transition-all duration-300"><Facebook size={18} /></a>
+                        <a href="/" className="w-10 h-10 rounded-full bg-gray-100 dark:bg-dark-800 flex items-center justify-center text-gray-400 hover:text-gold-500 hover:bg-gold-200 dark:hover:bg-dark-700 transition-all duration-300"><Instagram size={18} /></a>
                     </div>
                 </div>
             </div>

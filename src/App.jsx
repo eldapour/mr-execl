@@ -12,6 +12,8 @@ import { LanguageProvider } from './context/LanguageContext';
 import StepsCrmPage from './pages/StepsCrmPage';
 import OdooErpPage from './pages/OdooErpPage';
 import GoogleInfrastructurePage from './pages/GoogleInfrastructurePage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import TermsConditionsPage from './pages/TermsConditionsPage';
 
 function App() {
     return (
@@ -29,6 +31,8 @@ function App() {
                             <Route path="/steps-crm" element={<StepsCrmPage />} />
                             <Route path="/odoo-erp" element={<OdooErpPage />} />
                             <Route path="/google-infrastructure" element={<GoogleInfrastructurePage />} />
+                            <Route path="/privacy&policy" element={<PrivacyPolicyPage />} />
+                            <Route path="/terms&conditions" element={<TermsConditionsPage />} />
                         </Routes>
                     </Layout>
                 </Router>
