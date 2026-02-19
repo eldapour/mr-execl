@@ -153,6 +153,7 @@ const Home = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         className="inline-block mb-4 px-4 py-1 border border-gold-500/30 rounded-full bg-gold-500/10 backdrop-blur-sm"
+                        style={{ marginTop: '5rem' }}
                     >
                         <span className="text-gold-400 text-sm tracking-[0.2em] uppercase font-semibold">
                             {t('Digital Transformation', 'التحول الرقمي')}

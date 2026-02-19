@@ -54,7 +54,7 @@ const Navbar = () => {
                         </button>
                         <button onClick={toggleLanguage} className="border border-gold-500/50 px-3 py-1 rounded hover:bg-gold-500 hover:text-black transition-all flex items-center gap-2 text-xs font-bold tracking-widest text-dark-900 dark:text-white">
                             <Globe size={14} />
-                            <span>{lang === 'en' ? 'AR' : 'EN'}</span>
+                            <span>{lang === 'en' ? 'العربية' : 'English'}</span>
                         </button>
                     </div>
                 </div>
@@ -79,7 +79,7 @@ const Navbar = () => {
                         </Link>
                     ))}
                     <button onClick={() => { toggleLanguage(); setIsOpen(false); }} className="text-gold-500 font-bold text-left">
-                        {t('Switch to Arabic', 'التبديل للإنجليزية')}
+                        {t('التبديل للعربية', 'Switch to English')}
                     </button>
                 </div>
             </div>
