@@ -14,6 +14,7 @@ import OdooErpPage from './pages/OdooErpPage';
 import GoogleInfrastructurePage from './pages/GoogleInfrastructurePage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import TermsConditionsPage from './pages/TermsConditionsPage';
+import DataProcessingPage from './pages/DataProcessingPage';
 
 function App() {
     return (
@@ -32,6 +33,7 @@ function App() {
                             <Route path="/odoo-erp" element={<OdooErpPage />} />
                             <Route path="/google-infrastructure" element={<GoogleInfrastructurePage />} />
                             <Route path="/privacy&policy" element={<PrivacyPolicyPage />} />
+                            <Route path="/data-processing" element={<DataProcessingPage />} />
                             <Route path="/terms&conditions" element={<TermsConditionsPage />} />
                         </Routes>
                     </Layout>

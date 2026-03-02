@@ -71,6 +71,7 @@ const Footer = () => {
                         <div className="flex gap-4">
                             <Link to="/privacy&policy" className="hover:text-gold-500 transition-colors">{t('Privacy & Policy', 'سياسة الخصوصية')}</Link>
                             <Link to="/terms&conditions" className="hover:text-gold-500 transition-colors">{t('Terms & Conditions', 'الشروط والأحكام')}</Link>
+                            <Link to="/data-processing" className="hover:text-gold-500 transition-colors">{t('Data Processing', 'اتفاقية معالجة البيانات')}</Link>
                         </div>
                     </div>
                     <div className="flex gap-4">
