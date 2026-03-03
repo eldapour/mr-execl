@@ -30,7 +30,7 @@ const Navbar = () => {
             <div className="container mx-auto px-6 flex justify-between items-center">
                 <Link to="/" className="flex items-center gap-2">
                     <img
-                        src={isDark ? "/assets/mr-execl-logo-dark.png" : "/assets/mr-execl-logo.png"}
+                        src={isDark ? "/assets/dark_logo.svg" : "/assets/light_logo.svg"}
                         alt="MR EXCEL"
                         className="h-20 w-auto object-contain"
                     />
