@@ -30,7 +30,7 @@ const Footer = () => {
                         <ul className="space-y-3 text-gray-500 dark:text-gray-400 text-sm">
                             <li><Link to="/about" className="hover:text-gold-500 transition-colors">{t('About Us', 'من نحن')}</Link></li>
                             <li><Link to="/services" className="hover:text-gold-500 transition-colors">{t('Services', 'الخدمات')}</Link></li>
-                            <li><a href="https://www.stepscrm.com" target="_blank" rel="noopener noreferrer" className="hover:text-gold-500 transition-colors">STEPS CRM</a></li>
+                            <li><a href="/steps-crm" target="_blank" rel="noopener noreferrer" className="hover:text-gold-500 transition-colors">STEPS CRM</a></li>
                         </ul>
                     </div>
 
